@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 1704070324205241302}
   - component: {fileID: 5741739763885227188}
   - component: {fileID: 6487498033982420574}
+  - component: {fileID: 5040119840094643039}
   m_Layer: 6
   m_Name: Zombie
   m_TagString: Untagged
@@ -198,7 +199,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 00a681cf7dd32d64bbe7a7a942e6d2cc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1c8414c0943ec7c41a4eaabbf073af54, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -285,6 +286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rb: {fileID: 8817318822174463044}
   _spriteRenderer: {fileID: 4390240427475395763}
+  flipSpriteOnly: 1
 --- !u!114 &1704070324205241302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -336,6 +338,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _navigation: {fileID: 5741739763885227188}
   _noticeSymbol: {fileID: 3447061175696215409}
+--- !u!114 &5040119840094643039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4493058866409224732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: -0.375, y: -1.2, z: 0}
+  - {x: -0.375, y: 1.2, z: 0}
+  - {x: 0.375, y: 1.2, z: 0}
+  - {x: 0.375, y: -1.2, z: 0}
+  m_ShapePathHash: 0
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -54024
+  m_LocalBounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0.375, y: 1.2, z: 0}
 --- !u!1 &4513980984875034114
 GameObject:
   m_ObjectHideFlags: 0
