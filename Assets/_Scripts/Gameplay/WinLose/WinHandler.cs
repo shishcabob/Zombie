@@ -2,8 +2,9 @@ using Game.SceneManagement;
 using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Game.Gameplay.Lamps;
 
-namespace Game.Gameplay
+namespace Game.Gameplay.WinLose
 {
     public class WinHandler : MonoBehaviour
     {

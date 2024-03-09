@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Game.Gameplay
+namespace Game.Gameplay.Lamps
 {
     public class LampManager : MonoBehaviour
     {

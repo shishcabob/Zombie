@@ -10,6 +10,9 @@ namespace Game.Animation
 
         [SerializeField] private SpriteRenderer _spriteRenderer;
 
+        [Tooltip("Should we flip the sprite or the whole transform?")]
+        [SerializeField] private bool flipSpriteOnly = false;
+
 
         #endregion
 
@@ -21,7 +24,13 @@ namespace Game.Animation
             {
                 return;
             }
-            _spriteRenderer.flipX = _rb.velocity.x < 0;
+            if (flipSpriteOnly)
+            {
+                _spriteRenderer.flipX = _rb.velocity.x < 0;
+                return;
+            }
+            float newY = _rb.velocity.x < 0 ? 180 : 0;
+            transform.rotation = Quaternion.Euler(new Vector3(0, newY, 0));
         }
 
         #endregion

@@ -1,8 +1,13 @@
 using System;
 using UnityEngine;
 
-namespace Game.Gameplay
+namespace Game.Gameplay.AI
 {
+    /// <summary>
+    /// Takes into account the visibility of the target.
+    /// This is a simple rules-based AI.
+    /// No BTs, Utility AI, or anything like that here.
+    /// </summary>
     public class NavigateToTarget : MonoBehaviour
     {
         #region Variables

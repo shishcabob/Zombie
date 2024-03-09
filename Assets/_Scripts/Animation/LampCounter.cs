@@ -1,4 +1,4 @@
-using Game.Gameplay;
+using Game.Gameplay.Lamps;
 using TMPro;
 using UnityEngine;
 

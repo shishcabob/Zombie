@@ -1,4 +1,4 @@
-using Game.Gameplay;
+using Game.Gameplay.AI;
 using System.Collections;
 using UnityEngine;
 

@@ -3,7 +3,7 @@ using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Game.Gameplay
+namespace Game.Gameplay.WinLose
 {
     public class DeathHandler : MonoBehaviour
     {
