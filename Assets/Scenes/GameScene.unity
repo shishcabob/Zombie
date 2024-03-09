@@ -785,10 +785,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 599055969}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d0641c6ec569349a66ef3523f97374, type: 3}
+  m_Script: {fileID: 11500000, guid: 2ac3f92f389cd164face46d228dea87c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _nextLevel: {sceneAsset: {fileID: 102900000, guid: 21ed644d692c0cf4ba535199f2a05363, type: 3}, scenePath: Assets/Scenes/WinScene.unity}
+  _nextLevel:
+    sceneAsset: {fileID: 102900000, guid: 21ed644d692c0cf4ba535199f2a05363, type: 3}
+    scenePath: Assets/Scenes/WinScene.unity
 --- !u!4 &599055971
 Transform:
   m_ObjectHideFlags: 0
@@ -927,7 +929,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 738667709}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b28f7b9b52477ea44a0ba55c1db9ca1d, type: 3}
+  m_Script: {fileID: 11500000, guid: 49f74a2c704148c4e93cfdbe58ba2f72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _playerHealth: {fileID: 1945420739}
@@ -1511,8 +1513,9 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1945420736}
-        m_TargetAssemblyTypeName: Game.Gameplay.Movement, Game.Gameplay
+      - m_Target: {fileID: 1945420743}
+        m_TargetAssemblyTypeName: Game.Gameplay.CharacterControllers.MoveOnInput,
+          Game.Gameplay
         m_MethodName: OnMovementInput
         m_Mode: 0
         m_Arguments:
@@ -1530,7 +1533,19 @@ MonoBehaviour:
     m_ActionId: afe918ba-3196-47f6-bf51-440a11f75dc0
     m_ActionName: Player/Pause[/Keyboard/escape]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1945420732}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: ebe490ab-4d32-4efa-bca7-194b0f5c3ab0
     m_ActionName: Player/Dash[/Mouse/leftButton]
   - m_PersistentCalls:
@@ -1751,7 +1766,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1434804450}
   - component: {fileID: 1434804449}
-  - component: {fileID: 1434804448}
+  - component: {fileID: 1434804451}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1759,26 +1774,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1434804448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1434804447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
 --- !u!114 &1434804449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1809,6 +1804,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1434804451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434804447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_XRTrackingOrigin: {fileID: 0}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
+  m_CursorLockBehavior: 0
 --- !u!1 &1656365367
 GameObject:
   m_ObjectHideFlags: 0
@@ -1922,7 +1947,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1696225420}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83b8d51bff84d984ea2cd84aaec3eb02, type: 3}
+  m_Script: {fileID: 11500000, guid: 44f3b8f21d6b0664a89734e180943541, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1762305186
@@ -5732,9 +5757,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1945420734}
   - component: {fileID: 1945420733}
-  - component: {fileID: 1945420736}
   - component: {fileID: 1945420735}
   - component: {fileID: 1945420737}
+  - component: {fileID: 1945420743}
   - component: {fileID: 1945420738}
   - component: {fileID: 1945420740}
   - component: {fileID: 1945420739}
@@ -5842,21 +5867,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &1945420736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1945420732}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1dbd6c6769b9ffc4682ae11d18c26492, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _rb: {fileID: 1945420735}
-  _speed: 10
-  moveInput: {x: 0, y: 0}
 --- !u!70 &1945420737
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -5984,6 +5994,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1945420743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945420732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcbb1d58c4278df498d8cd81ceac752d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rb: {fileID: 1945420735}
+  _speed: 10
 --- !u!1001 &1850529371813235005
 PrefabInstance:
   m_ObjectHideFlags: 0
